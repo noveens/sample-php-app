@@ -2,6 +2,7 @@
 <html>
 	<?php include '../resources/templates/header-basic-light.php';?>
 	<?php include 'call_api.php';?>
+	<script type="text/javascript" src="js/index.js"></script>
 	
 	<body>
 		<div class="main_body">
@@ -9,10 +10,10 @@
 				Add some text in the following box and click on the button to see the summary of the text you entered.
 			</p>
 
-			<form method="post" action="index.php">
+			<form method="post">
 				<textarea name="txtarea" id = "inp" rows = "7"> </textarea>
 				<div id = "pad">
-					<input type="submit" id = "sub" />
+					<input type="submit" id = "sub" onclick="call_api()" />
 				</div>
 			</form>
 
@@ -26,7 +27,7 @@
 					echo $output;
 
 					echo $data;
-	           } 
+	           }
 	        ?>
 
 		</div>
