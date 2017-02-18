@@ -9,8 +9,8 @@
 
 	<title>Basic Header</title>
 
-	<link rel="stylesheet" href="assets/demo.css">
-	<link rel="stylesheet" href="assets/header-fixed.css">
+	<link rel="stylesheet" href="../../public_html/css/demo.css">
+	<link rel="stylesheet" href="../../public_html/css/header-fixed.css">
 	<link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
 
 </head>

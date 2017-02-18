@@ -9,8 +9,8 @@
 
 	<title>Login, Sign up Header</title>
 
-	<link rel="stylesheet" href="assets/demo.css">
-	<link rel="stylesheet" href="assets/header-login-signup.css">
+	<link rel="stylesheet" href="../../public_html/css/demo.css">
+	<link rel="stylesheet" href="../../public_html/css/header-login-signup.css">
 	<link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
 
 </head>

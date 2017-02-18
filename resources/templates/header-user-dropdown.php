@@ -7,10 +7,10 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Search Header</title>
+	<title>User Dropdown Header</title>
 
-	<link rel="stylesheet" href="assets/demo.css">
-	<link rel="stylesheet" href="assets/header-search.css">
+	<link rel="stylesheet" href="../../public_html/css/demo.css">
+	<link rel="stylesheet" href="../../public_html/css/header-user-dropdown.css">
 	<link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
 
 
@@ -18,22 +18,28 @@
 
 <body>
 
-<header class="header-search">
+<header class="header-user-dropdown">
 
 	<div class="header-limiter">
-
 		<h1><a href="#">Company<span>logo</span></a></h1>
 
 		<nav>
-			<a href="#">Home</a>
-			<a href="#" class="selected">Blog</a>
-			<a href="#">Pricing</a>
-			<a href="#">Contact</a>
+			<a href="#">Overview</a>
+			<a href="#">Surveys</a>
+			<a href="#">Reports</a>
+			<a href="#">Roles <span class="header-new-feature">new</span></a>
 		</nav>
 
-		<form method="get" action="#">
-			<input type="search" placeholder="Search!" name="search">
-		</form>
+
+		<div class="header-user-menu">
+			<img src="assets/2.jpg" alt="User Image"/>
+
+			<ul>
+				<li><a href="#">Settings</a></li>
+				<li><a href="#">Payments</a></li>
+				<li><a href="#" class="highlight">Logout</a></li>
+			</ul>
+		</div>
 
 	</div>
 
@@ -54,9 +60,9 @@
 		<li><a href="header-basic-light.html">Basic Light</a></li>
 		<li><a href="header-fixed.html">Fixed</a></li>
 		<li><a href="header-login-signup.html">Login/Sign up</a></li>
-		<li><a href="header-search.html"  class="active">Search</a></li>
+		<li><a href="header-search.html">Search</a></li>
 		<li><a href="header-second-bar.html">Second Bar</a></li>
-		<li><a href="header-user-dropdown.html">User Dropdown</a></li>
+		<li><a href="header-user-dropdown.html" class="active">User Dropdown</a></li>
 	</ul>
 
 </div>
@@ -64,18 +70,28 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script>
 
-	$(document).ready(function() {
+	$(document).ready(function(){
 
-		$('.header-search form').on('click', function(e) {
+		var userMenu = $('.header-user-dropdown .header-user-menu');
 
-			// If the form (which is turned into the search button) was
-			// clicked directly, toggle the visibility of the search box.
+		userMenu.on('touchend', function(e){
 
-			if(e.target == this) {
-				$(this).find('input').toggle();
-			}
+			userMenu.addClass('show');
+
+			e.preventDefault();
+			e.stopPropagation();
 
 		});
+
+		// This code makes the user dropdown work on mobile devices
+
+		$(document).on('touchend', function(e){
+
+			// If the page is touched anywhere outside the user menu, close it
+			userMenu.removeClass('show');
+
+		});
+
 	});
 
 </script>
