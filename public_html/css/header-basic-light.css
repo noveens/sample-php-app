@@ -16,7 +16,7 @@
 
 .header-basic-light .header-limiter h1{
 	float: left;
-	font: normal 28px Cookie, Arial, Helvetica, sans-serif;
+	font: normal 38px Cookie, Arial, Helvetica, sans-serif;
 	line-height: 40px;
 	margin: 0;
 }
@@ -33,7 +33,7 @@
 }
 
 .header-basic-light .header-limiter nav{
-	font:15px Arial, Helvetica, sans-serif;
+	font:22px Arial, Helvetica, sans-serif;
 	line-height: 40px;
 	float: right;
 }
@@ -80,11 +80,4 @@
 		font-size: 13px;
 	}
 
-}
-
-/* For the headers to look good, be sure to reset the margin and padding of the body */
-
-body {
-	margin:0;
-	padding:0;
 }
