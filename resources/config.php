@@ -4,8 +4,8 @@ session_start();
 
 $CONFIG = array(
 
-	'proxy' => 'proxy.iiit.ac.in',
-	'proxy_port' => '8080'
+	'proxy' => '',
+	'proxy_port' => ''
 
 );
 
