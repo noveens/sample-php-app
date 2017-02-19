@@ -12,3 +12,7 @@ function call_api () {
 
 	alert('dd');
 }
+
+function add_to (set) {
+	document.getElementById('inp2').value = set;
+}

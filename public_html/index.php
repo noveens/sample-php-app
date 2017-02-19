@@ -2,6 +2,8 @@
 <html>
 	<?php include '../resources/templates/header-basic-light.php';?>
 	<?php include 'call_api.php';?>
+	<?php session_start() ?>
+
 	<script type="text/javascript" src="js/index.js"></script>
 	
 	<body>
@@ -11,24 +13,23 @@
 			</p>
 
 			<form method="post">
-				<textarea name="txtarea" id = "inp" rows = "7"> </textarea>
-				<div id = "pad">
-					<input type="submit" id = "sub" onclick="call_api()" />
-				</div>
+				<textarea name="txtarea" id = "inp" class = "inp" rows = "7"><?php echo $data['inp']; ?></textarea>
+				<input type="submit" value="Summarize !" id = "sub" />
 			</form>
 
 			<?php
-	           if($_SERVER['REQUEST_METHOD']=='POST') {
-	               $data = CallAPI( 
-					'https://cotomax-summarizer-text-v1.p.mashape.com/summarizer' , 
-					$_POST['txtarea']);
+				if($_SERVER['REQUEST_METHOD'] == 'POST') 
+				{
+					$data['inp'] = $_POST['txtarea'];
+					
+					$data['ans'] = CallAPI( 
+						'https://cotomax-summarizer-text-v1.p.mashape.com/summarizer' , 
+						$_POST['txtarea']
+					);
+				}
+			?>
 
-					$output = "<script>console.log( 'Debug Objects: " . gettype($data) . "' );</script>";
-					echo $output;
-
-					echo $data;
-	           }
-	        ?>
+			<textarea name="txtarea" id = "inp2" class = "inp" rows = "7"><?php echo $data['ans']; ?></textarea>
 
 		</div>
 	</body>
