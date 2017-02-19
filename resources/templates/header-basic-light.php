@@ -4,7 +4,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Light, Basic Header</title>
+	<title>MultiApp</title>
 
 	<link rel="stylesheet" href="css/demo.css">
 	<link rel="stylesheet" href="css/header-basic-light.css">
@@ -16,7 +16,7 @@
 
 	<div class="header-limiter">
 
-		<h1><a href="index.php">Company<span>logo</span></a></h1>
+		<h1><a href="index.php">Summarize<span>It!</span></a></h1>
 
 		<nav>
 			<a href="index.php" class = "selected">Home</a>
